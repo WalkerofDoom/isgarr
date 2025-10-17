@@ -1,0 +1,76 @@
+{
+  "name": "guismi",
+  "title": "Survival Guide in an Improvised World",
+  "description": "A system for the Survival Guide in an Improvised World RPG.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "authors": [
+    {
+      "name": "Your Name"
+    }
+  ],
+  "esmodules": [
+    "guismi.js"
+  ],
+  "styles": [
+    "guismi.css"
+  ],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "label": "Character",
+        "model": "system.ActorModel",
+        "sheet": "system.GuismiActorSheet"
+      }
+    },
+    "Item": {
+      "item": {
+        "label": "Item",
+        "model": "system.ItemModel",
+        "sheet": "system.GuismiItemSheet"
+      },
+      "species": {
+        "label": "Species",
+        "model": "system.SpeciesData",
+        "sheet": "system.GuismiItemSheet"
+      },
+      "path": {
+        "label": "Path",
+        "model": "system.PathData",
+        "sheet": "system.GuismiItemSheet"
+      },
+      "weapon": {
+        "label": "Weapon",
+        "model": "system.WeaponData",
+        "sheet": "system.GuismiItemSheet"
+      },
+      "armor": {
+        "label": "Armor",
+        "model": "system.ArmorData",
+        "sheet": "system.GuismiItemSheet"
+      },
+      "estado": {
+        "label": "Estado",
+        "model": "system.EstadoData",
+        "sheet": "system.GuismiItemSheet"
+      }
+    }
+  },
+  "grid": {
+    "distance": 5,
+    "units": "m"
+  },
+  "primaryTokenAttribute": "resources.sangue",
+  "secondaryTokenAttribute": "resources.mana"
+}
