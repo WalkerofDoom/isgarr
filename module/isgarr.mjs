@@ -1,5 +1,6 @@
 import { IsgarrActor } from "./actor/Actor.mjs";
 import PersonagemSheet from "./actor/PersonagemSheet.mjs";
+import { IsgarrItem } from "./item/item.mjs";
 import { IsgarrItemSheet } from "./item/ItemSheet.mjs";
 
 // Inicialização do sistema
@@ -8,7 +9,7 @@ Hooks.once('init', async function() {
 
   // Define as classes customizadas de Documentos
   CONFIG.Actor.documentClass = IsgarrActor;
-  // CONFIG.Item.documentClass = IsgarrItem; // Descomentar quando criarmos a lógica do Item
+  CONFIG.Item.documentClass = IsgarrItem;
 
   // Desregistra as fichas padrão
   Actors.unregisterSheet("core", ActorSheet);
