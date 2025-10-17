@@ -27,3 +27,14 @@ Hooks.once("init", () => {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("guismi", GuismiItemSheet, { makeDefault: true });
 });
+
+Hooks.on("preUpdateActor", (actor, update) => {
+  if (update.system && update.system.progression && update.system.progression.xp) {
+    const newXp = update.system.progression.xp;
+    if (newXp >= actor.system.progression.xpMax) {
+      actor.levelUp();
+      // Prevent the direct XP update, as levelUp handles it
+      delete update.system.progression.xp;
+    }
+  }
+});
