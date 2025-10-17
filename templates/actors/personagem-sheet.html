@@ -154,10 +154,12 @@
       <div class="box">
         <h3 class="box-header">Detalhes Biográficos</h3>
         {{#each systemData.biografia as |valor key|}}
+          {{#unless (eq key "caminho")}}
           <div class="grid grid-biography">
             <label>{{key}}</label>
             <textarea name="system.biografia.{{key}}" rows="3">{{valor}}</textarea>
           </div>
+          {{/unless}}
         {{/each}}
       </div>
     </div>
