@@ -1,76 +1,52 @@
 {
-  "name": "guismi",
-  "title": "Survival Guide in an Improvised World",
-  "description": "A system for the Survival Guide in an Improvised World RPG.",
-  "version": "1.0.0",
-  "compatibility": {
-    "minimum": "11",
-    "verified": "11"
-  },
+  "id": "isgarr",
+  "title": "GUI.S.M.I.: regras de Is’garr",
+  "description": "Sistema para o RPG GUI.S.M.I.: regras de Is’garr, um mundo de fantasia e sobrevivência.",
+  "version": "1.1.0",
   "authors": [
     {
-      "name": "Your Name"
+      "name": "Seu Nome Aqui"
     }
   ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.341"
+  },
   "esmodules": [
-    "guismi.js"
+    "module/isgarr.mjs"
   ],
   "styles": [
-    "guismi.css"
+    "css/isgarr.css"
   ],
-  "packs": [],
   "languages": [
     {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-BR.json"
     }
   ],
-  "documentTypes": {
-    "Actor": {
-      "character": {
-        "label": "Character",
-        "model": "system.ActorModel",
-        "sheet": "system.GuismiActorSheet"
-      }
+  "packs": [
+    {
+      "name": "habilidades",
+      "label": "Habilidades",
+      "system": "isgarr",
+      "path": "packs/habilidades.db",
+      "type": "Item",
+      "private": false
     },
-    "Item": {
-      "item": {
-        "label": "Item",
-        "model": "system.ItemModel",
-        "sheet": "system.GuismiItemSheet"
-      },
-      "species": {
-        "label": "Species",
-        "model": "system.SpeciesData",
-        "sheet": "system.GuismiItemSheet"
-      },
-      "path": {
-        "label": "Path",
-        "model": "system.PathData",
-        "sheet": "system.GuismiItemSheet"
-      },
-      "weapon": {
-        "label": "Weapon",
-        "model": "system.WeaponData",
-        "sheet": "system.GuismiItemSheet"
-      },
-      "armor": {
-        "label": "Armor",
-        "model": "system.ArmorData",
-        "sheet": "system.GuismiItemSheet"
-      },
-      "estado": {
-        "label": "Estado",
-        "model": "system.EstadoData",
-        "sheet": "system.GuismiItemSheet"
-      }
+    {
+      "name": "especies",
+      "label": "Espécies",
+      "system": "isgarr",
+      "path": "packs/especies.db",
+      "type": "Item",
+      "private": false
     }
-  },
-  "grid": {
-    "distance": 5,
-    "units": "m"
-  },
-  "primaryTokenAttribute": "resources.sangue",
-  "secondaryTokenAttribute": "resources.mana"
+  ],
+  "primaryTokenAttribute": "recursos.sangue",
+  "secondaryTokenAttribute": "recursos.mana",
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt"
 }
